@@ -13,9 +13,9 @@ export class AppService {
     launchWindow() {
         if(this._electronService.isElectronApp) {
         //console.log('Is eletronApp: ' + this._electronService.isElectronApp + ' Type of Shell: ' + typeof this._electronService.shell );
-        //this._electronService.shell.openExternal('https://google.com');
-          let pong: string = this._electronService.ipcRenderer.sendSync('ping');
-          console.log(pong);
+        this._electronService.shell.openExternal('https://google.com');
+          //let pong: string = this._electronService.ipcRenderer.sendSync('ping');
+          //console.log(pong);
         }
     }
 }
